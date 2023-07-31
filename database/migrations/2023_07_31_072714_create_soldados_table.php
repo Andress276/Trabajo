@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('Cod_s');
             $table->string('Nom_s');
-            $table->string('Apell_s'); // Agregar la columna Apell_s
-            $table->string('Grado_s'); // Agregar la columna Grado_s
-            $table->string('Cod_ce1'); // Agregar la columna Cod_ce1
-            $table->integer('Num_com1'); // Agregar la columna Num_com1
+            $table->string('Apell_s'); 
+            $table->string('Grado_s'); 
+            $table->string('Cod_ce1'); 
+            $table->integer('Num_com1'); 
             $table->timestamps();
         });
     }

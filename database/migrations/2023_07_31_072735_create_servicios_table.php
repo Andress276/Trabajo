@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('Cod_ser');
             $table->string('Acti_ser');
-            $table->string('Cod_2'); // Agregar la columna Cod_2
+            $table->string('Cod_2');
             $table->timestamps();
         });
     }
