@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Soldado extends Model
 {
-    protected $fillable = ['Cod_s', 'Nom_s', 'Apell_s', 'Grado_s', 'Cod_ce1', 'Num_com1'];
 
-    public function servicios()
+    
+    public function servicio()
     {
-        return $this->belongsToMany(Servicio::class);
+        return $this->belongsToMany('App\Models\Servicio');
     }
 
-    public function images()
+    public function image()
     {
-        return $this->morphMany(Image::class, 'imageable');
+        return $this->morphOne('App\Models\Image','imageable');
     }
 }

@@ -9,13 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('images', function (Blueprint $table) {
-            $table->string('url');
-            $table->unsignedBigInteger('imageable_id')->nullable();
-            $table->string('imageable_type');
-            $table->primary(['imageable_id','imageable_type']);
+        Schema::create('cuarteles', function (Blueprint $table) {
+            $table->id();
+            $table->string('Cod_c');
+            $table->string('Nom_c');
+            $table->string('Ubic_c');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('images');
+        Schema::dropIfExists('cuarteles');
     }
 };

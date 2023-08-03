@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
-
+class Cuartel extends Model
 {
-    public function imageable()
-    {
-        return $this->morphTo();
+    public function image(){
+        
+        return $this->morphToOne('App\Models\Image','imageable');
     }
 }
